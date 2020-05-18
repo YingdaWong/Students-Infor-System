@@ -10,3 +10,6 @@
 | GET      | /students/edit   | id       |                                | Render edit page     |
 | POST     | /studens/edit    |          | id、name、age、gender、hobbies | Handle edit request     |
 | GET      | /students/delete | id       |                                | Handle delete request     |
+
+Note：
+  添加学生时点 submit 后会报错，服务器死掉，但是查看数据库发现添加成功
