@@ -87,13 +87,16 @@ router.post('/students/new', function (req, res) {
     //1. 获取表单数据
     //2. 处理
     //3. 发送响应
-    new Student(req.body).save(function (err) {
-        if (err) {
-            return res.send('server error')
-        }
-        res.redirect('/students')
-    })
-    res.redirect('/')
+    // if(req.session.username) {
+        new Student(req.body).save(function (err) {
+            if (err) {
+                return res.send('server error')
+            }
+            res.redirect('/students')
+        })
+    // } else {
+    //     res.redirect('/');
+    // }   
 })
 
 /**
